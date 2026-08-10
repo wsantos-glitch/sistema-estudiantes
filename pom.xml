@@ -10,4 +10,11 @@
         <maven.compiler.release>26</maven.compiler.release>
         <exec.mainClass>gt.edu.umg.sistema.estudiantes.ws.SistemaEstudiantesWs</exec.mainClass>
     </properties>
+<dependencies>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.2</version>
+        </dependency>
+    </dependencies>
 </project>
