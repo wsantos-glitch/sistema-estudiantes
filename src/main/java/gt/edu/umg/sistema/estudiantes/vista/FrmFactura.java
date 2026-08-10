@@ -21,7 +21,6 @@ public class FrmFactura extends javax.swing.JInternalFrame {
 
    public FrmFactura() {
         initComponents();
-        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         modeloTabla = (javax.swing.table.DefaultTableModel) tblDetalle.getModel();
         
         // Autocompletar la fecha actual
@@ -338,7 +337,7 @@ public class FrmFactura extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtProducto;
     // End of variables declaration//GEN-END:variables
 
-    private void setExtendedState(int MAXIMIZED_BOTH) {
+    private void setExtendedState() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
