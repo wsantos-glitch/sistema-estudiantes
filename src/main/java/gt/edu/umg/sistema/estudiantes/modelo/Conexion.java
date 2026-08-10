@@ -13,7 +13,7 @@ import java.sql.DriverManager;
 public class Conexion {
     private static final String URL = "jdbc:postgresql://localhost:5432/bd_sistema_estudiantes";
     private static final String USER = "postgres";
-    private static final String PASS = "TU_CONTRASEÑA"; // <-- Escribe tu clave aquí
+    private static final String PASS = "12345"; // 
 
     public Connection getConnection() {
         try {
