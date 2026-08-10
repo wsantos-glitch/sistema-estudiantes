@@ -14,7 +14,7 @@ import java.util.logging.Logger;
  *
  * @author wilso
  */
-public class FrmEstudiante extends javax.swing.JFrame {
+public class FrmEstudiante extends javax.swing.JInternalFrame {
     private EstudianteController controlador;
     private DefaultTableModel modeloTabla;
     /**

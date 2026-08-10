@@ -27,70 +27,74 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        btnIrEstudiantes = new javax.swing.JButton();
-        btnIrFacturas = new javax.swing.JButton();
+        escritorio = new javax.swing.JDesktopPane();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(java.awt.SystemColor.activeCaption);
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
 
-        jLabel1.setBackground(new java.awt.Color(153, 204, 255));
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("MENU PRINCIPAL");
+        escritorio.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        btnIrEstudiantes.setText("Módulo de Estudiantes");
-        btnIrEstudiantes.addActionListener(this::btnIrEstudiantesActionPerformed);
+        javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
+        escritorio.setLayout(escritorioLayout);
+        escritorioLayout.setHorizontalGroup(
+            escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 974, Short.MAX_VALUE)
+        );
+        escritorioLayout.setVerticalGroup(
+            escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 492, Short.MAX_VALUE)
+        );
 
-        btnIrFacturas.setText("Módulo Facturas");
-        btnIrFacturas.setToolTipText("");
-        btnIrFacturas.addActionListener(this::btnIrFacturasActionPerformed);
+        jMenu1.setText("Menú");
+
+        jMenuItem1.setText("Abrir Facturación");
+        jMenuItem1.addActionListener(this::jMenuItem1ActionPerformed);
+        jMenu1.add(jMenuItem1);
+
+        jMenuItem2.setText("Abrir Estudiantes");
+        jMenuItem2.addActionListener(this::jMenuItem2ActionPerformed);
+        jMenu1.add(jMenuItem2);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnIrEstudiantes)
-                            .addComponent(jLabel1)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(78, 78, 78)
-                        .addComponent(btnIrFacturas)))
-                .addContainerGap(73, Short.MAX_VALUE))
+            .addComponent(escritorio)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(52, 52, 52)
-                .addComponent(btnIrEstudiantes)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addComponent(btnIrFacturas)
-                .addGap(29, 29, 29))
+            .addComponent(escritorio)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnIrEstudiantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIrEstudiantesActionPerformed
-// Instanciamos y mostramos el formulario que ya tenías
-        FrmEstudiante frmEstudiante = new FrmEstudiante();
-        frmEstudiante.setVisible(true);       
-    }//GEN-LAST:event_btnIrEstudiantesActionPerformed
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        FrmFactura vistaFactura = new FrmFactura();
+        escritorio.add(vistaFactura);
+        vistaFactura.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void btnIrFacturasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIrFacturasActionPerformed
-        FrmFactura frmFactura = new FrmFactura();
-        frmFactura.setVisible(true);
-    }//GEN-LAST:event_btnIrFacturasActionPerformed
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+      FrmEstudiante vistaEstudiante = new FrmEstudiante();
+    escritorio.add(vistaEstudiante);
+    vistaEstudiante.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnIrEstudiantes;
-    private javax.swing.JButton btnIrFacturas;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JDesktopPane escritorio;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     // End of variables declaration//GEN-END:variables
 }
