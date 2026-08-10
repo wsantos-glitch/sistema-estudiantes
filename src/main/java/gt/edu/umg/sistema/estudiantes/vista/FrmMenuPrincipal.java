@@ -96,25 +96,41 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         FrmFactura vistaFactura = new FrmFactura();
         escritorio.add(vistaFactura);
-        vistaFactura.setVisible(true);
+       try {
+        vistaFactura.setMaximum(true);
+    } catch (java.beans.PropertyVetoException e) {
+    }
+    vistaFactura.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
       FrmEstudiante vistaEstudiante = new FrmEstudiante();
     escritorio.add(vistaEstudiante);
+    try {
+        vistaEstudiante.setMaximum(true);
+    } catch (java.beans.PropertyVetoException e) {
+    }
     vistaEstudiante.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
     FrmCliente vistaCliente = new FrmCliente();
 escritorio.add(vistaCliente); // Recordar. JDesktopPane - escritorio
-vistaCliente.setVisible(true);
+try {
+        vistaCliente.setMaximum(true);
+    } catch (java.beans.PropertyVetoException e) {
+    }
+    vistaCliente.setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
 FrmProducto vistaProducto = new FrmProducto();
 escritorio.add(vistaProducto);
-vistaProducto.setVisible(true);
+try {
+        vistaProducto.setMaximum(true);
+    } catch (java.beans.PropertyVetoException e) {
+    }
+    vistaProducto.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

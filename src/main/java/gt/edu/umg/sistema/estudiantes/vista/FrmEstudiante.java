@@ -22,6 +22,7 @@ public class FrmEstudiante extends javax.swing.JInternalFrame {
      */
     public FrmEstudiante() {
         initComponents();
+        this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         controlador = new EstudianteController();
         modeloTabla = (DefaultTableModel) tblEstudiantes.getModel();
     }
@@ -245,4 +246,8 @@ public class FrmEstudiante extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txtId;
     private javax.swing.JTextField txtNombres;
     // End of variables declaration//GEN-END:variables
+
+    private void setExtendedState(int MAXIMIZED_BOTH) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
